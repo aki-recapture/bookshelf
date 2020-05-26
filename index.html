@@ -5,21 +5,16 @@
   <meta charset="utf-8">
   <title>Bookshelf | カンタン！あなたのオンライン本棚</title>
 
-  <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
-  <!-- 自サイトのCSS -->
   <link rel="stylesheet" href="main.css">
 </head>
 
 <body>
-  <!-- 最初のローディング表示 -->
   <section id="loading" class="view">
     <i class="initial-loading-icon fas fa-sync" aria-hidden="true"></i>
   </section>
-  <!-- /#loading -->
-
-  <!-- ログイン画面 -->
+ 
   <section id="login" class="view">
     <div class="container">
       <div class="row justify-content-center">
@@ -54,14 +49,11 @@
       </div>
     </div>
   </section>
-  <!-- /#login -->
-
-  <!-- 書籍一覧画面 -->
+ 
   <section id="bookshelf" class="view">
     <header>
       <div id="header">
         <div id="logo">
-          <!-- <a href="./bookshelf_index.php" -->
           <a href="./index.html"><img src="./images/logo.png" alt="Bookshelf"></a>
         </div>
         <a href="#add-book-modal" data-toggle="modal" class="add-button">
@@ -82,10 +74,8 @@
       </div>
     </div>
   </section>
-  <!-- /#bookshelf -->
 
   <div id="book-template">
-    <!-- 書籍のテンプレート -->
     <div class="book-item">
       <div class="book-item__image-wrapper">
         <img class="book-item__image" alt="">
@@ -100,10 +90,8 @@
         </div>
       </div>
     </div>
-    <!-- /.book-item -->
   </div>
 
-  <!-- 書籍情報追加モーダル -->
   <div id="add-book-modal" class="modal fade" tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
@@ -139,27 +127,15 @@
         </form>
       </div>
     </div>
-    <!-- /.modal-content -->
   </div>
-  <!-- /.modal-dialog -->
   </div>
-  <!-- /#add-book-modal -->
-
-  <!-- Firebaseのセットアップコード（下記のSDKのバージョンは6.2.0） -->
-  <!-- The core Firebase JS SDK is always required and must be listed first 
-    (中心となるFirebase SDKです。常に必要で、最初に記述する必要があります) -->
+ 
   <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
-
-  <!-- TODO: Add SDKs for Firebase products that you want to use
-         https://firebase.google.com/docs/web/setup#config-web-app
-        (使いたいFirebaseサービス用のSDKを加えます) -->
   <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-database.js"></script>
   <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-storage.js"></script>
 
-  <!-- apiKeyなどは、ご自身の環境のものに合わせてください -->
   <script>
-// Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyBk9EdAqtlQXQxmJ-ChjfjjOZi1A3X3qu8",
   authDomain: "realtime-chat-d7467.firebaseapp.com",
@@ -167,20 +143,13 @@ const firebaseConfig = {
   projectId: "realtime-chat-d7467",
   storageBucket: "realtime-chat-d7467.appspot.com",
 };
-// Initialize Firebase
 firebase.initializeApp(firebaseConfig);
   </script>
 
-  <!-- jQuery -->
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-
-  <!-- Popper.js, 次に Bootstrap JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
   <script src="main.js"></script>
-
-  <!-- Font Awesome -->
   <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js"></script>
 </body>
 
